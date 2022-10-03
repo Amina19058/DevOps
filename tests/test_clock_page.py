@@ -8,6 +8,6 @@ folder. Here we test the status code (it should be
 
 def test_clock_page(client):
     response = client.get("/http://localhost")
-    assert response.webpage.status_code == 200
+    assert response.status_code == 200
     response_decoded = response.data.decode()
     assert 'TIME TO SMILE' in response_decoded
