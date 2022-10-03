@@ -9,7 +9,8 @@ def create_app():
     '''
     Function that creates instance of Flask
     '''
-    app = Flask('Time', template_folder='src/templates')
+    app = Flask('Time', template_folder='../templates')
+    app.static_folder = '../static'
     @app.route("/")
     def get_cur_time():
         '''
